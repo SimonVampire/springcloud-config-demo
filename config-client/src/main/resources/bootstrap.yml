@@ -8,4 +8,22 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:8888/
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8889/eureka/
+#开启所有端点 refresh config
+management:
+  server:
+#   2.0以后的版本必须加上端口， 否则会404,和该服务端口相同即可
+    port: ${server.port}
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+#      默认/actuator。手动刷新地址：http://${client.hostname}:${clent.port}}/actuator/refresh
+#      base-path: /
+
