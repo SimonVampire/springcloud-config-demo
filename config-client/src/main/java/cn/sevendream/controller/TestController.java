@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class TestController {
     @Value("${foo}")
-    String foo;
+    private String foo;
     @RequestMapping(value = "/hi")
     public String hi(){
         return foo;

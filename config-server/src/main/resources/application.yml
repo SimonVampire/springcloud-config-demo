@@ -15,6 +15,7 @@ spring:
 
         git:
           uri: https://github.com/SimonVampire/SpringCloudConfig/
+#          必须要有一个目录 否则读取不到配置,我这里的respo下不放任何东西 也可以读到外面的配置
           search-paths: respo
           username:
           password:
