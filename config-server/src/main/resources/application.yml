@@ -7,6 +7,12 @@ spring:
   cloud:
     config:
       server:
+#        svn:
+#          uri:   #这里得使用http或https 目前集团不支持
+#          username:
+#          password:
+#          default-label: /   # 默认trunk
+
         git:
           uri: https://github.com/SimonVampire/SpringCloudConfig/
           search-paths: respo

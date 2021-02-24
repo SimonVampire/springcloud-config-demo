@@ -40,6 +40,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.tmatesoft.svnkit/svnkit -->
+            <dependency>
+                <groupId>org.tmatesoft.svnkit</groupId>
+                <artifactId>svnkit</artifactId>
+                <version>1.10.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
