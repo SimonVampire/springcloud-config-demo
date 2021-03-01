@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class TestController {
-    @Value("${foo}")
+    @Value("${eureka.instance.hostname}")
     private String foo;
     @RequestMapping(value = "/hi")
     public String hi(){

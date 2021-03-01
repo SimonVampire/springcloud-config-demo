@@ -1,3 +1,4 @@
 /config-server/target/
 /eureka-server/target/
 /config-client/target/
+/.idea/

@@ -4,13 +4,21 @@ server:
 spring:
   application:
     name: config-client
+# SVN配置
   cloud:
     config:
-      label: master
-      profile: dev
+      profile: sit
       discovery:
         enabled: true
         service-id: config-server
+#  GIT常见配置
+#  cloud:
+#    config:
+#      label: master
+#      profile: dev
+#      discovery:
+#        enabled: true
+#        service-id: config-server
 eureka:
   client:
     service-url:
