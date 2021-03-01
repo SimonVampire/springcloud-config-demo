@@ -12,11 +12,13 @@ spring:
     config:
       server:
         svn:
-          uri: # svn://SVN地址
+          uri: #svn://地址
           username: #用户名
           password: #密码
           default-label: /   # 默认trunk
-#          basedir: data
+          #默认在系统临时目录下面，需要调整一下避免临时文件被系统自动清理,如果更换SVN源 则需要删除basedir路径缓存数据
+          basedir: data/cloudConfig
+
 
 #        git:
 #          uri: https://github.com/SimonVampire/SpringCloudConfig/
