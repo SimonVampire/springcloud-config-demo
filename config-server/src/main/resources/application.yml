@@ -4,22 +4,24 @@ server:
 spring:
   application:
     name: config-server
+  profiles:
+    active: subversion
   cloud:
     config:
       server:
-#        svn:
-#          uri:   #这里得使用http或https 目前集团不支持
-#          username:
-#          password:
-#          default-label: /   # 默认trunk
-
-        git:
-          uri: https://github.com/SimonVampire/SpringCloudConfig/
-#          必须要有一个目录 否则读取不到配置,我这里的respo下不放任何东西 也可以读到外面的配置
-          search-paths: respo
+        svn:
+          uri: svn://svnaddresss #svn地址
           username:
           password:
-      label: master
+          default-label: /   # 默认trunk
+
+#        git:
+#          uri: https://github.com/SimonVampire/SpringCloudConfig/
+##          必须要有一个目录 否则读取不到配置,我这里的respo下不放任何东西 也可以读到外面的配置
+#          search-paths: respo
+#          username:
+#          password:
+#      label: master
 eureka:
   client:
     service-url:
